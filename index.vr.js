@@ -1,34 +1,22 @@
-import React from 'react';
+import React from 'react'
 import {
   AppRegistry,
   asset,
   Pano,
   Text,
   View,
-} from 'react-vr';
+} from 'react-vr'
+import TitleScene from './components/scenes/TitleScene.js'
+import Dashboard from './components/scenes/Dashboard.js'
 
 export default class VrVideoApp extends React.Component {
   render() {
     return (
       <View>
-        <Pano source={asset('chess-world.jpg')}/>
-        <Text
-          style={{
-            backgroundColor: '#777879',
-            fontSize: 0.8,
-            fontWeight: '400',
-            layoutOrigin: [0.5, 0.5],
-            paddingLeft: 0.2,
-            paddingRight: 0.2,
-            textAlign: 'center',
-            textAlignVertical: 'center',
-            transform: [{translate: [0, 0, -3]}],
-          }}>
-          hello
-        </Text>
+        <Dashboard text={"Select Environment"}/>
       </View>
-    );
+    )
   }
-};
+}
 
-AppRegistry.registerComponent('VrVideoApp', () => VrVideoApp);
+AppRegistry.registerComponent('VrVideoApp', () => VrVideoApp)
