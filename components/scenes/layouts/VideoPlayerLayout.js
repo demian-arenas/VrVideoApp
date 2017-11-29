@@ -26,7 +26,7 @@ class VideoPlayerLayout extends React.Component {
           flexDirection: 'column',
           alignItems: 'stretch',
           layoutOrigin: [0.5, 0.5],
-          transform: [{ translate: [0, 0, 5] }]
+          transform: [{ translate: [0, 3.5, 5] }, { rotateY: -180 }]
         }}>
           <Button showButton={this.props.showButton} text={this.props.text} />
         </View>
