@@ -24,18 +24,16 @@ export default class VrVideoApp extends React.Component {
   gatherStreamIDs(response) {
     const IDs = response.data.featured.map(function (feat) {
       return feat.stream._id;
-    });
-    console.log(IDs);
+    })
   }
   componentWillMount() {
     axios.get('https://api.twitch.tv/kraken/streams/featured?limit=6&client_id=skawlpb80ixx8e9cxafxepbn66xhe1')
       .then(response => {
-        console.log(response);
         this.gatherPreviews(response);
         this.gatherStreamIDs(response);
       })
-      .catch(e => {
-        console.log(error);
+      .catch(error => {
+        console.log(error)
       });
   }
 

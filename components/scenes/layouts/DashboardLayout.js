@@ -102,7 +102,10 @@ class DashboardLayout extends React.Component {
           }}
         >
           <MenuButtons />
-          <TileButtons updateStage={this.updateStage.bind(this)} borderWidths={this.state.borderWidths} />
+          <TileButtons
+            previews={this.props.previews}
+            updateStage={this.updateStage.bind(this)}
+            borderWidths={this.state.borderWidths} />
           <ProgressCircles color1={this.state.color1} color2={this.state.color2} />
         </Animated.View>
 
