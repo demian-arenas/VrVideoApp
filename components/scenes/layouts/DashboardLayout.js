@@ -3,14 +3,18 @@ import {
   View,
   Animated
 } from 'react-vr'
+
 import { Easing } from 'react-native'
 
 import MenuButtons from './elements/MenuButtons.js'
 import TileButtons from './elements/TileButtons.js'
 import ProgressCircles from './elements/ProgressCircles.js'
+
 import Button from './elements/Button.js'
+
 //Layout
 class DashboardLayout extends React.Component {
+
   constructor(props) {
     super(props)
     this.state = {
@@ -19,19 +23,9 @@ class DashboardLayout extends React.Component {
       showButton: false,
       color1: "#A482DF",
       color2: "#DBDAF1",
-      text: this.props.text
+      text: this.props.text,
+      borderWidths: [0, 0, 0, 0, 0, 0]
     }
-  }
-
-  updateShowButton() {
-    this.setState({ showButton: true })
-  }
-  updateScene() {
-    this.setState({
-      color1: "#DBDAF1",
-      color2: "#A482DF",
-      text: "Watch Video"
-    })
   }
 
   componentDidMount() {
@@ -57,6 +51,38 @@ class DashboardLayout extends React.Component {
     ]).start()
   }
 
+  //previously updateShowButton
+  updateStage(input) {
+    if (this.state.showButton === false) {
+      this.setState({ showButton: true })
+    }
+
+    switch (input) {
+      case 1:
+        this.setState({ borderWidths: [0.05, 0, 0, 0, 0, 0] })
+        break
+      case 2:
+        this.setState({ borderWidths: [0, 0.05, 0, 0, 0, 0] })
+        break
+      case 3:
+        this.setState({ borderWidths: [0, 0, 0.05, 0, 0, 0] })
+        break
+      case 4:
+        this.setState({ borderWidths: [0, 0, 0, 0.05, 0, 0] })
+        break
+      case 5:
+        this.setState({ borderWidths: [0, 0, 0, 0, 0.05, 0] })
+        break
+      case 6:
+        this.setState({ borderWidths: [0, 0, 0, 0, 0, 0.05] })
+        break
+    }
+  }
+
+  updateScene() {
+    this.setState({ color1: "#DBDAF1", color2: "#A482DF", text: "Watch Video" })
+  }
+
   render() {
     return (
       <View>
@@ -76,9 +102,10 @@ class DashboardLayout extends React.Component {
           }}
         >
           <MenuButtons />
-          <TileButtons updateShowButton={this.updateShowButton.bind(this)} />
+          <TileButtons updateStage={this.updateStage.bind(this)} borderWidths={this.state.borderWidths} />
           <ProgressCircles color1={this.state.color1} color2={this.state.color2} />
         </Animated.View>
+
         <View style={{
           width: 5,
           height: 0.5,
@@ -95,4 +122,5 @@ class DashboardLayout extends React.Component {
     )
   }
 }
+
 module.exports = DashboardLayout
