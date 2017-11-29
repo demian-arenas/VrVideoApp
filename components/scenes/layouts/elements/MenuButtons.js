@@ -33,7 +33,7 @@ class MenuButtons extends React.Component {
                 textAlign: 'center',
                 color: "#FFFFFF"
               }}>
-              Twitch
+            Twitch
             </Text>
           </VrButton>
         </View>
