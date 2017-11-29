@@ -12,47 +12,35 @@ class TileButtons extends React.Component {
     return (
       <View style={{ marginTop: -0.09, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
         <View style={{ margin: 0.1, width: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-          <View style={{ margin: 0.1, height: 0.6, backgroundColor: "#CAB9E5" }}>
-            <VrButton>
+          <View
+            style={{
+              margin: 0.1,
+              height: 0.6,
+              backgroundColor: "#CAB9E5",
+              borderWidth: "0",
+              borderColor: "#A482DF",
+              borderStyle: "solid"
+            }}>
+            <VrButton onClick={this.props.updateShowButton}>
               <Text
                 style={{
                   fontSize: 0.2,
                   textAlign: 'center',
                   color: "#FFFFFF"
                 }}>
-
               </Text>
             </VrButton>
           </View>
-          <View style={{ margin: 0.1, height: 0.6, backgroundColor: "#CAB9E5" }}>
-            <VrButton>
-              <Text
-                style={{
-                  fontSize: 0.2,
-                  textAlign: 'center',
-                  color: "#FFFFFF"
-                }}>
-
-              </Text>
-            </VrButton>
-          </View>
-        </View>
-
-        <View style={{ margin: 0.1, width: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-          <View style={{ margin: 0.1, height: 0.6, backgroundColor: "#CAB9E5" }}>
-            <VrButton>
-              <Text
-                style={{
-                  fontSize: 0.2,
-                  textAlign: 'center',
-                  color: "#FFFFFF"
-                }}>
-
-              </Text>
-            </VrButton>
-          </View>
-          <View style={{ margin: 0.1, height: 0.6, backgroundColor: "#CAB9E5" }}>
-            <VrButton>
+          <View
+            style={{
+              margin: 0.1,
+              height: 0.6,
+              backgroundColor: "#CAB9E5",
+              borderWidth: "0",
+              borderColor: "#A482DF",
+              borderStyle: "solid"
+            }}>
+            <VrButton onClick={this.props.updateShowButton}>
               <Text
                 style={{
                   fontSize: 0.2,
@@ -67,7 +55,7 @@ class TileButtons extends React.Component {
 
         <View style={{ margin: 0.1, width: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
           <View style={{ margin: 0.1, height: 0.6, backgroundColor: "#CAB9E5" }}>
-            <VrButton>
+            <VrButton onClick={this.props.updateShowButton}>
               <Text
                 style={{
                   fontSize: 0.2,
@@ -79,7 +67,34 @@ class TileButtons extends React.Component {
             </VrButton>
           </View>
           <View style={{ margin: 0.1, height: 0.6, backgroundColor: "#CAB9E5" }}>
-            <VrButton>
+            <VrButton onClick={this.props.updateShowButton}>
+              <Text
+                style={{
+                  fontSize: 0.2,
+                  textAlign: 'center',
+                  color: "#FFFFFF"
+                }}>
+
+              </Text>
+            </VrButton>
+          </View>
+        </View>
+
+        <View style={{ margin: 0.1, width: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+          <View style={{ margin: 0.1, height: 0.6, backgroundColor: "#CAB9E5" }}>
+            <VrButton onClick={this.props.updateShowButton}>
+              <Text
+                style={{
+                  fontSize: 0.2,
+                  textAlign: 'center',
+                  color: "#FFFFFF"
+                }}>
+
+              </Text>
+            </VrButton>
+          </View>
+          <View style={{ margin: 0.1, height: 0.6, backgroundColor: "#CAB9E5" }}>
+            <VrButton onClick={this.props.updateShowButton}>
               <Text
                 style={{
                   fontSize: 0.2,
