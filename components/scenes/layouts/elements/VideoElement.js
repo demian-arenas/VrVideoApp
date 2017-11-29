@@ -20,9 +20,9 @@ class VideoElement extends React.Component {
       Animated.timing(
         this.state.fadeIn,
         {
-          toValue: 1,
-          duration: 2000,
-          easing: Easing.ease
+         toValue: 1,
+         duration: 2000,
+         easing: Easing.ease
         }
       )
     ]).start()
@@ -30,8 +30,8 @@ class VideoElement extends React.Component {
 
   render() {
     return (
-      <Animated.View style={{ margin: 0.1, height: 4, opacity: this.state.fadeIn }}>
-        <Video style={{ height: 4 }} source={asset('fireplace.mp4')} />
+      <Animated.View style={{ margin: 0.1, height: 4, opacity: this.state.fadeIn}}>
+        <View id="player"></View>
       </Animated.View>
     )
   }

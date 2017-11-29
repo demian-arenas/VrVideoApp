@@ -2,12 +2,12 @@ import React from 'react'
 import {
   View
 } from 'react-vr'
+
 //Element
 class ProgressCircles extends React.Component {
 
   render() {
     return (
-      //Outermost View
       <View>
         <View
           style={{
@@ -25,7 +25,8 @@ class ProgressCircles extends React.Component {
               borderRadius: 0.5,
               height: 0.1,
               backgroundColor: this.props.color1
-            }}>
+            }}
+          >
           </View>
           <View
             style={{
@@ -34,7 +35,8 @@ class ProgressCircles extends React.Component {
               borderRadius: 0.5,
               height: 0.1,
               backgroundColor: this.props.color2
-            }}>
+            }}
+          >
           </View>
         </View>
       </View>
