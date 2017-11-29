@@ -11,9 +11,10 @@ import Dashboard from './components/scenes/Dashboard.js'
 
 export default class VrVideoApp extends React.Component {
   render() {
+    //<TitleScene showButton={true} text={"Watch a Video"}/>
     return (
       <View>
-        <Dashboard text={"Select Environment"}/>
+        <Dashboard showButton={false} text={"Select Environment"}/>
       </View>
     )
   }

@@ -11,9 +11,27 @@ import ProgressCircles from './elements/ProgressCircles.js'
 import Button from './elements/Button.js'
 //Layout
 class DashboardLayout extends React.Component {
-  constructor() {
-    super()
-    this.state = { slideLeft: new Animated.Value(-1), fadeIn: new Animated.Value(0) }
+  constructor(props) {
+    super(props)
+    this.state = {
+      slideLeft: new Animated.Value(-1),
+      fadeIn: new Animated.Value(0),
+      showButton: false,
+      color1: "#A482DF",
+      color2: "#DBDAF1",
+      text: this.props.text
+    }
+  }
+
+  updateShowButton() {
+    this.setState({ showButton: true })
+  }
+  updateScene() {
+    this.setState({
+      color1: "#DBDAF1",
+      color2: "#A482DF",
+      text: "Watch Video"
+    })
   }
 
   componentDidMount() {
@@ -58,8 +76,8 @@ class DashboardLayout extends React.Component {
           }}
         >
           <MenuButtons />
-          <TileButtons />
-          <ProgressCircles />
+          <TileButtons updateShowButton={this.updateShowButton.bind(this)} />
+          <ProgressCircles color1={this.state.color1} color2={this.state.color2} />
         </Animated.View>
         <View style={{
           width: 5,
@@ -71,7 +89,7 @@ class DashboardLayout extends React.Component {
           transform: [{ translate: [0, 0, -3] }],
           marginTop: -0.7
         }}>
-          <Button text={this.props.text} />
+          <Button updateScene={this.updateScene.bind(this)} showButton={this.state.showButton} text={this.state.text} />
         </View>
       </View>
     )

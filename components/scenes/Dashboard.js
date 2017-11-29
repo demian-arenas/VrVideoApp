@@ -12,7 +12,7 @@ class Dashboard extends React.Component {
     return (
       <View>
         <Pano source={asset('title-background.jpg')} />
-        <DashboardLayout text={this.props.text} />
+        <DashboardLayout text={this.props.text}/>
       </View>
     )
   }
