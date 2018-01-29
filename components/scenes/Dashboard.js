@@ -13,7 +13,7 @@ class Dashboard extends React.Component {
   render() {
     return (
       <View>
-        <Pano source={asset('dashboard-background.jpg')}/>
+        <Pano source={asset('title-background.jpg')}/>
         <DashboardLayout
           environments={this.props.environments}
           captureSelection={this.props.captureSelection}
